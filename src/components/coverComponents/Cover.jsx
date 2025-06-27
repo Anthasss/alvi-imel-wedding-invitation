@@ -24,7 +24,7 @@ export default function Cover() {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
-      className="relative flex flex-col bg-gray-100 bg-[url('/cover.jpeg')] bg-cover bg-center h-screen"
+      className="relative flex flex-col bg-gray-100 bg-[url('/cover.jpeg')] bg-cover bg-center h-dvh"
     >
       {/* Opaque bottom section */}
       <div className="absolute bottom-0 w-full h-1/3 bg-white"></div>
