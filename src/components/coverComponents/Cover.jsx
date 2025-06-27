@@ -26,7 +26,7 @@ export default function Cover() {
         </div>
       </motion.div>
 
-      <div className="h-[50dvh] flex items-center justify-center w-full bg-white">
+      <div className="flex flex-col gap-y-12 items-center justify-center w-full bg-white">
         <motion.div>
           <div className="text-center">
             <p className="text-2xl mb-4">Kamis 24 Juli 2025</p>
@@ -34,6 +34,14 @@ export default function Cover() {
             {/* countdown */}
             <Countdown />
           </div>
+        </motion.div>
+
+        <motion.div className="text-center">
+          <p className="text-2xl mb-4">Kejadian 2: 18</p>
+          <p className="text-2xl">
+            "Dan Tuhan Allah berfirman: Tidak baik, kalau manusia itu seorang diri saja. Aku akan menjadikan penolong
+            baginya, yang sepadan dengan dia."
+          </p>
         </motion.div>
       </div>
     </>
