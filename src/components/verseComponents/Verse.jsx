@@ -20,14 +20,14 @@ export default function Verse() {
   ];
 
   return(
-    <motion.div className="text-center flex flex-col items-center gap-y-8 w-full">
+    <motion.div className="text-center flex flex-col items-center gap-y-8 w-full py-16 bg-[#d6ada4]">
         {/* image carousel a */}
         <InfiniteImageCarousel images={carouselAImages} direction="l" />
 
         {/* Bible Verse */}
-        <div className="my-8">
-          <p className="text-2xl mb-4">Kejadian 2: 18</p>
-          <p className="text-2xl">
+        <div className="my-8 text-shadow-2xs text-red-950">
+          <p className="text-3xl mb-4 font-semibold">Kejadian 2: 18</p>
+          <p className="text-2xl font-semibold">
           "Dan Tuhan Allah berfirman: Tidak baik, kalau manusia itu seorang diri saja. Aku akan menjadikan penolong
           baginya, yang sepadan dengan dia."
           </p>
