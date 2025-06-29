@@ -20,13 +20,12 @@ export default function Verse() {
   ];
 
   return(
-    <>
-    <motion.div className="text-center flex flex-col items-center gap-y-8">
+    <motion.div className="text-center flex flex-col items-center gap-y-8 w-full">
         {/* image carousel a */}
         <InfiniteImageCarousel images={carouselAImages} direction="l" />
 
         {/* Bible Verse */}
-        <div>
+        <div className="my-8">
           <p className="text-2xl mb-4">Kejadian 2: 18</p>
           <p className="text-2xl">
           "Dan Tuhan Allah berfirman: Tidak baik, kalau manusia itu seorang diri saja. Aku akan menjadikan penolong
@@ -37,6 +36,5 @@ export default function Verse() {
         {/* image carousel b */}
         <InfiniteImageCarousel images={carouselBImages} direction="r" />
       </motion.div>
-    </>
   )
 }
