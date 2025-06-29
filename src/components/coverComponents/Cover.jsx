@@ -1,15 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import Countdown from "../Countdown";
+import Countdown from "./Countdown";
 
 export default function Cover() {
   return (
-    <>
+    <div className="flex flex-col items-center justify-center w-full bg-white">
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative flex flex-col bg-gray-100 bg-[url('/cover.jpeg')] bg-cover bg-center h-dvh"
+        className="relative flex flex-col bg-gray-100 bg-[url('/cover.jpeg')] bg-cover bg-center bg-no-repeat h-screen w-full"
       >
         {/* Opaque bottom section */}
         <div className="absolute bottom-0 w-full h-1/3 bg-white"></div>
@@ -26,24 +26,14 @@ export default function Cover() {
         </div>
       </motion.div>
 
-      <div className="flex flex-col gap-y-12 items-center justify-center w-full bg-white">
-        <motion.div>
-          <div className="text-center">
+      <div className="flex flex-col items-center justify-center w-full bg-white">
+        <motion.div className="text-center">
             <p className="text-2xl mb-4">Kamis 24 Juli 2025</p>
 
             {/* countdown */}
             <Countdown />
-          </div>
-        </motion.div>
-
-        <motion.div className="text-center">
-          <p className="text-2xl mb-4">Kejadian 2: 18</p>
-          <p className="text-2xl">
-            "Dan Tuhan Allah berfirman: Tidak baik, kalau manusia itu seorang diri saja. Aku akan menjadikan penolong
-            baginya, yang sepadan dengan dia."
-          </p>
         </motion.div>
       </div>
-    </>
+    </div>
   );
 }
