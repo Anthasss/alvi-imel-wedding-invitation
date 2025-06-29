@@ -2,6 +2,7 @@ import "./App.css";
 import Cover from "./components/coverComponents/Cover.jsx";
 import Verse from "./components/verseComponents/Verse.jsx";
 import GroomBrideIntro from "./components/GroomBrideIntroComponents/GroomBrideIntro.jsx";
+import Events from "./components/eventsComponents/Events.jsx";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Cover />
       <Verse />
       <GroomBrideIntro />
+      <Events />
     </div>
   );
 }
