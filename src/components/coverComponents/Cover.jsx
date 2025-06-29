@@ -21,7 +21,7 @@ export default function Cover() {
         <div className="absolute bottom-0 w-full h-1/3 p-6 grid place-items-center text-center">
           <div>
             <p className="text-2xl">The Wedding of</p>
-            <h1 className="text-5xl font-bold mb-2">Alvi & Imel</h1>
+            <h1 className="text-5xl font-bold mb-2">Alfi & Imel</h1>
           </div>
         </div>
       </motion.div>

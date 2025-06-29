@@ -9,7 +9,7 @@ export default function InfiniteImageCarousel({ images, direction = "l" }) {
         direction={marqueeDirection}
         speed={50}
         gradient={false}
-        pauseOnHover={true}
+        pauseOnHover={false}
         className="h-full"
       >
         {images.map((image, index) => (
