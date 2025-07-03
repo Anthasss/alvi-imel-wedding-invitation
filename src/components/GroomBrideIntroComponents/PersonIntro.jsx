@@ -15,7 +15,7 @@ export default function PersonIntro({ imagePath, name, desc }) {
         <h2 className="text-3xl font-bold mb-2">{name}</h2>
 
         {/* Description */}
-        <p className="text-xl text-gray-700">{desc}</p>
+        <p className="text-xl" dangerouslySetInnerHTML={{ __html: desc }}></p>
       </div>
     </div>
   );
