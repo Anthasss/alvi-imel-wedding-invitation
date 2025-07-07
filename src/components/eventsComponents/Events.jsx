@@ -1,10 +1,24 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { Calendar, Clock, MapPin } from "lucide-react";
 
 export default function Events() {
   return (
-    <div className="flex flex-col gap-8 items-center justify-around w-full bg-[#d6ada4] py-16 min-h-screen shadow-[inset_0_10px_30px_rgba(0,0,0,0.3),inset_0_-10px_30px_rgba(0,0,0,0.3)] border-t border-b border-amber-800/20">
+    <motion.div 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="flex flex-col gap-8 items-center justify-around w-full bg-[#d6ada4] py-16 min-h-screen shadow-[inset_0_10px_30px_rgba(0,0,0,0.3),inset_0_-10px_30px_rgba(0,0,0,0.3)] border-t border-b border-amber-800/20"
+    >
       {/* Pemberkatan */}
-      <div className="p-8 rounded-xl shadow-xl w-full max-w-lg mx-auto border border-amber-200 min-h-[400px]">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="p-8 rounded-xl shadow-xl w-full max-w-lg mx-auto border border-amber-200 min-h-[400px]"
+      >
         {/* Header */}
         <div className="text-center mb-6">
           <h1 className="text-6xl font-semibold text-amber-800 mb-2">Pemberkataan</h1>
@@ -33,10 +47,16 @@ export default function Events() {
           </div>
           <p className="text-lg text-red-700">Jl. Pemuda No. 80A, Kuanino, Kupang</p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Resepsi */}
-      <div className="p-8 rounded-xl shadow-xl w-full max-w-lg mx-auto border border-amber-200 min-h-[400px]">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        viewport={{ once: true }}
+        className="p-8 rounded-xl shadow-xl w-full max-w-lg mx-auto border border-amber-200 min-h-[400px]"
+      >
         {/* Header */}
         <div className="text-center mb-6">
           <h1 className="text-6xl font-semibold text-amber-800 mb-2">Resepsi</h1>
@@ -65,7 +85,7 @@ export default function Events() {
           </div>
           <p className="text-lg text-red-700">Jl. Terusan Timor Raya, Kelapa Lima, Kupang</p>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

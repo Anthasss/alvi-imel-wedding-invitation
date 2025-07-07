@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { X } from 'lucide-react';
 
@@ -20,18 +22,40 @@ export default function Gallery() {
   };
 
   return (
-    <div className="w-full bg-white py-16">
+    <motion.div 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="w-full bg-white py-16"
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
           <h2 className="text-6xl font-semibold mb-4">Gallery</h2>
-        </div>
+        </motion.div>
 
         {/* Masonry Grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-          {galleryImages.map((image) => (
-            <div 
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+        >
+          {galleryImages.map((image, index) => (
+            <motion.div 
               key={image.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
               className="break-inside-avoid cursor-pointer transform transition-transform hover:scale-105"
               onClick={() => openModal(image)}
             >
@@ -41,9 +65,9 @@ export default function Gallery() {
                 className="w-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                 loading="lazy"
               />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Modal */}
@@ -64,6 +88,6 @@ export default function Gallery() {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
