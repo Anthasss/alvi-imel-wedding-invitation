@@ -7,7 +7,7 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   // Generate array of gallery images from g1.jpeg to g25.jpeg
-  const galleryImages = Array.from({ length: 25 }, (_, index) => ({
+  const galleryImages = Array.from({ length: 23 }, (_, index) => ({
     id: index + 1,
     src: `/gallery/g${index + 1}.jpeg`,
     alt: `Gallery image ${index + 1}`

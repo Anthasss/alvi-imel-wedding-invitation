@@ -4,6 +4,7 @@ import Verse from "./components/verseComponents/Verse.jsx";
 import GroomBrideIntro from "./components/GroomBrideIntroComponents/GroomBrideIntro.jsx";
 import Events from "./components/eventsComponents/Events.jsx";
 import Gallery from "./components/galleryComponents/Gallery.jsx";
+import DigitalGift from "./components/digitalGiftComponents/DigitalGift.jsx";
 import Footer from "./components/footerComponents/Footer.jsx";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <GroomBrideIntro />
       <Events />
       <Gallery />
+      <DigitalGift />
       <Footer />
     </div>
   );

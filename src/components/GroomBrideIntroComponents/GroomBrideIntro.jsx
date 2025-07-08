@@ -18,8 +18,8 @@ export default function GroomBrideIntro() {
         viewport={{ once: true }}
         className="flex flex-col items-center text-center text-2xl"
       >
-        <h1 className="text-amber-800">Welcome to Our Wedding</h1>
-        <p className="text-red-950">Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir ke acara pernikahan kami.</p>
+        <h1 className="">Welcome to Our Wedding</h1>
+        <p className="">Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir ke acara pernikahan kami.</p>
       </motion.div>
 
       <div className="flex flex-col gap-2">
