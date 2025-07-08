@@ -32,7 +32,8 @@ export default function GroomBrideIntro() {
           <PersonIntro
             imagePath="/groomBrideIntro/groom.jpeg"
             name="Alfi Anderson Padja"
-            desc="Anak keempat Putra tunggal dari empat bersaudara<br/>pasangan Bapak Johanis Padja dan Ibu Marleni Padja-Gow"
+            desc="Anak keempat Putra tunggal dari empat bersaudara"
+            parents="pasangan Bapak Johanis Padja dan Ibu Marleni Padja-Gow."
           />
         </motion.div>
         <motion.div
@@ -44,7 +45,8 @@ export default function GroomBrideIntro() {
           <PersonIntro
             imagePath="/groomBrideIntro/bride.jpeg"
             name="Imanuella Friedamaria Jacob"
-            desc="Anak pertama Putri pertama dari empat bersaudara <br/>pasangan Bapak Mozes Evendy Jacob dan Ibu Envie F. Jacob-Nunuhitu."
+            desc="Anak pertama Putri pertama dari empat bersaudara "
+            parents="pasangan Bapak Mozes Evendy Jacob dan Ibu Envie F. Jacob-Nunuhitu."
           />
         </motion.div>
       </div>  

@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import ATMCard from './ATMCard.jsx';
 
 export default function DigitalGift() {
-  const accountNumber = "1234567890";
-  const accountName = "Alvi & Imel";
   const bankLogo = "/logoBca.png";
 
   return (
@@ -13,7 +11,7 @@ export default function DigitalGift() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="flex flex-col items-center justify-center p-6 min-h-screen"
+      className="flex flex-col items-center justify-center min-h-screen"
     >
       {/* Section Title */}
       <motion.div 
@@ -21,7 +19,7 @@ export default function DigitalGift() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-12 sm:mx-6"
       >
         <h1 className="text-4xl font-bold text-gray-800 mb-4">Hadiah Digital</h1>
         <p className="text-2xl font-semibold text-gray-600 max-w-2xl">
@@ -30,11 +28,19 @@ export default function DigitalGift() {
       </motion.div>
 
       {/* ATM Card */}
-      <ATMCard 
-        accountNumber={accountNumber}
-        accountName={accountName}
-        bankLogo={bankLogo}
-      />
+      <div className='flex flex-col items-center gap-8 w-full'>
+        <ATMCard 
+          accountNumber="3141111319"
+          accountName="Alfi Anderson Padja"
+          bankLogo={bankLogo}
+        />
+
+        <ATMCard 
+          accountNumber="3141128815"
+          accountName="Imanuella Friedamaria Jacob"
+          bankLogo={bankLogo}
+        />
+      </div>
 
       {/* Additional Information */}
       <motion.div
@@ -42,7 +48,7 @@ export default function DigitalGift() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mt-8 max-w-md"
+        className="text-center mt-8 max-w-md mx-4 sm:mx-6"
       >
       </motion.div>
     </motion.div>

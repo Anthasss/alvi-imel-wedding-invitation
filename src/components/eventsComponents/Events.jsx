@@ -1,10 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import EventCard from "./EventCard.jsx";
 
 export default function Events() {
   return (
-    <div>
+    <motion.div initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}>
       {/* Top Wave */}
       <div className="w-full overflow-hidden leading-none rotate-180">
         <svg className="relative block w-full h-16 md:h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -14,90 +17,46 @@ export default function Events() {
         </svg>
       </div>
 
-      <motion.div 
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+      <div 
         className="flex flex-col gap-8 items-center justify-around w-full bg-[#d6ada4] py-16 min-h-screen"
       >
-      
-      {/* Pemberkatan */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="p-8 rounded-xl shadow-xl w-full max-w-lg mx-auto border border-amber-200 min-h-[400px]"
-      >
-        {/* Header */}
-        <div className="text-center mb-6">
-          <h1 className="text-6xl font-semibold text-amber-800 mb-2">Pemberkataan</h1>
+        {/* text */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-center mb-12 px-12"
+        >
+          <h2 className="text-4xl font-semibold text-amber-800 mb-2">Kami mengundang Anda untuk hadir dalam acara kami</h2>
+        </motion.div>
 
-          {/* Day */}
-          <p className="text-red-950 text-2xl mb-1">Kamis</p>
+        {/* Pemberkatan */}
+        <EventCard 
+          title="Pemberkataan"
+          day="Kamis"
+          date="24"
+          month="Juli"
+          year="2025"
+          time="13.00 WITA"
+          locationName="Gedung GKPKR Kupang"
+          locationAddress="Jl. Pemuda No. 80A, Kuanino, Kupang"
+          delay={0.2}
+        />
 
-          {/* Date */}
-          <div className="text-8xl font-bold text-red-900 mb-1">24</div>
-
-          {/* Month and Year */}
-          <p className="text-red-950 text-2xl">Juli 2025</p>
-        </div>
-
-        {/* Time */}
-        <div className="flex items-center justify-center text-red-800 mb-4">
-          <Clock className="w-6 h-6 mr-2" />
-          <span className="text-xl font-medium">13.00 WITA</span>
-        </div>
-
-        {/* Location */}
-        <div className="text-center">
-          <div className="flex items-center justify-center text-red-800 mb-2">
-            <MapPin className="w-6 h-6 mr-2" />
-            <span className="text-xl font-semibold">Gedung GKPKR Kupang</span>
-          </div>
-          <p className="text-lg text-red-700">Jl. Pemuda No. 80A, Kuanino, Kupang</p>
-        </div>
-      </motion.div>
-
-      {/* Resepsi */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        viewport={{ once: true }}
-        className="p-8 rounded-xl shadow-xl w-full max-w-lg mx-auto border border-amber-200 min-h-[400px]"
-      >
-        {/* Header */}
-        <div className="text-center mb-6">
-          <h1 className="text-6xl font-semibold text-amber-800 mb-2">Resepsi</h1>
-
-          {/* Day */}
-          <p className="text-red-950 text-2xl mb-1">Kamis</p>
-
-          {/* Date */}
-          <div className="text-8xl font-bold text-red-900 mb-1">24</div>
-
-          {/* Month and Year */}
-          <p className="text-red-950 text-2xl">Juli 2025</p>
-        </div>
-
-        {/* Time */}
-        <div className="flex items-center justify-center text-red-800 mb-4">
-          <Clock className="w-6 h-6 mr-2" />
-          <span className="text-xl font-medium">19.00 WITA</span>
-        </div>
-
-        {/* Location */}
-        <div className="text-center">
-          <div className="flex items-center justify-center text-red-800 mb-2">
-            <MapPin className="w-6 h-6 mr-2" />
-            <span className="text-xl font-semibold">Phoenix Restaurant</span>
-          </div>
-          <p className="text-lg text-red-700">Jl. Terusan Timor Raya, Kelapa Lima, Kupang</p>
-        </div>
-      </motion.div>
-      </motion.div>
+        {/* Resepsi */}
+        <EventCard 
+          title="Resepsi"
+          day="Kamis"
+          date="24"
+          month="Juli"
+          year="2025"
+          time="19.00 WITA"
+          locationName="Phoenix Restaurant"
+          locationAddress="Jl. Terusan Timor Raya, Kelapa Lima, Kupang"
+          delay={0.4}
+        />
+      </div>
 
       {/* Bottom Wave */}
       <div className="w-full overflow-hidden leading-none">
@@ -107,6 +66,6 @@ export default function Events() {
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#d6ada4"></path>
         </svg>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -21,7 +21,7 @@ export default function ATMCard({ accountNumber, accountName, bankLogo }) {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.4 }}
       viewport={{ once: true }}
-      className="card w-96 shadow-2xl relative overflow-hidden bg-[#d6ada4]"
+      className="card w-4/5 md:w-md shadow-2xl relative overflow-hidden bg-[#d6ada4]"
     >
       {/* Card Background Pattern */}
       <div className="absolute inset-0">
@@ -61,7 +61,7 @@ export default function ATMCard({ accountNumber, accountName, bankLogo }) {
         </div>
 
         {/* Middle Section - Account Details */}
-        <div className="flex flex-col text-white">
+        <div className="flex flex-col text-amber-900">
 
           <div className="text-xl font-mono font-bold tracking-wider mb-3">
             {accountNumber}
@@ -75,7 +75,7 @@ export default function ATMCard({ accountNumber, accountName, bankLogo }) {
         <div className="flex justify-end">
           <button
             onClick={copyToClipboard}
-            className={`btn btn-md rounded-md text-md font-bold ${copied ? 'btn-success' : 'bg-white hover:bg-white/80 text-black'} transition-all duration-300`}
+            className={`btn btn-md rounded-md text-md font-bold ${copied ? 'btn-success' : 'bg-white hover:bg-white/80 text-amber-900'} transition-all duration-300`}
           >
             {copied ? (
               <>
