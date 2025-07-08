@@ -27,6 +27,18 @@ export default function Footer() {
         className="py-16 bg-[#d6ada4]"
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
+          {/* Circular Image */}
+          <div className="mb-8 relative inline-block">
+            {/* Background circle for border effect */}
+            <div className="w-72 h-72 bg-white rounded-full shadow-2xl mx-auto flex items-center justify-center">
+              <img 
+                src="/footerImage.jpeg" 
+                alt="Wedding couple" 
+                className="mask mask-circle w-64 h-64 object-cover"
+              />
+            </div>
+          </div>
+          
           <p className="text-2xl leading-relaxed mb-6">
             Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir pada pernikahan kami.
           </p>
