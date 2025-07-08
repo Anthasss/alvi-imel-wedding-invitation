@@ -13,7 +13,7 @@ export default function DigitalGift() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 to-purple-50 p-6 min-h-screen"
+      className="flex flex-col items-center justify-center p-6 min-h-screen"
     >
       {/* Section Title */}
       <motion.div 
@@ -23,9 +23,9 @@ export default function DigitalGift() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Digital Gift</h1>
-        <p className="text-xl text-gray-600 max-w-2xl">
-          Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we would be grateful for your contribution.
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">Hadiah Digital</h1>
+        <p className="text-2xl font-semibold text-gray-600 max-w-2xl">
+          Kehadiran Anda di pernikahan kami adalah hadiah terbesar dari semuanya. Namun, jika Anda ingin memberikan hadiah, kami akan sangat berterima kasih atas kontribusi Anda.
         </p>
       </motion.div>
 
@@ -44,9 +44,6 @@ export default function DigitalGift() {
         viewport={{ once: true }}
         className="text-center mt-8 max-w-md"
       >
-        <p className="text-gray-600 text-sm">
-          Click the copy button to copy the account number to your clipboard for easy transfer.
-        </p>
       </motion.div>
     </motion.div>
   );
