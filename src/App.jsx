@@ -1,6 +1,6 @@
 import "./App.css";
 import Cover from "./components/coverComponents/Cover.jsx";
-import Verse from "./components/verseComponents/Verse.jsx";
+import Verse from "./components/verseComponents/verse.jsx";
 import GroomBrideIntro from "./components/GroomBrideIntroComponents/GroomBrideIntro.jsx";
 import Events from "./components/eventsComponents/Events.jsx";
 import Gallery from "./components/galleryComponents/Gallery.jsx";
