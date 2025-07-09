@@ -5,10 +5,18 @@ import { useState, useEffect } from 'react';
 export default function LandingCover() {
   const [isVisible, setIsVisible] = useState(true);
   const [isExiting, setIsExiting] = useState(false);
+  const [guestName, setGuestName] = useState('nama tamu');
 
-  // Set initial body overflow to hidden on component mount
+  // Set initial body overflow to hidden on component mount and get guest name from URL
   useEffect(() => {
     document.body.style.overflow = 'hidden';
+    
+    // Get guest name from URL query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const nameFromUrl = urlParams.get('kepada') || urlParams.get('to');
+    if (nameFromUrl) {
+      setGuestName(decodeURIComponent(nameFromUrl));
+    }
     
     // Cleanup function to restore scroll if component unmounts
     return () => {
@@ -106,7 +114,7 @@ export default function LandingCover() {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="text-lg sm:text-xl text-red-950 mb-8 font-semibold"
           >
-            nama tamu
+            {guestName}
           </motion.p>
           
           {/* Open invitation button */}
