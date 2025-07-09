@@ -1,5 +1,6 @@
 import "./App.css";
 import LandingCover from "./components/landingComponents/LandingCover.jsx";
+import AudioController from "./components/landingComponents/AudioController.jsx";
 import Cover from "./components/coverComponents/Cover.jsx";
 import Verse from "./components/verseComponents/verse.jsx";
 import GroomBrideIntro from "./components/GroomBrideIntroComponents/GroomBrideIntro.jsx";
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <LandingCover />
+      <AudioController />
       <div className="md:px-20 lg:px-80 flex flex-col gap-y-24 items-center justify-center w-full bg-white">
         <Cover />
         <Verse />

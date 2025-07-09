@@ -26,6 +26,12 @@ export default function LandingCover() {
 
   const handleOpenInvitation = () => {
     setIsExiting(true);
+    
+    // Play background music using global function
+    if (window.playBackgroundMusic) {
+      window.playBackgroundMusic();
+    }
+    
     // Delay hiding the component to allow fade animation to complete
     setTimeout(() => {
       setIsVisible(false);
@@ -48,6 +54,7 @@ export default function LandingCover() {
         transition={{ duration: 0.8 }}
         className="relative flex flex-col items-center justify-center h-screen w-full bg-gradient-to-br from-pink-50 to-pink-100 overflow-hidden"
       >
+        {/* ...existing code... */}
         {/* Decorative background elements */}
         <div className="absolute top-10 left-10 w-32 h-32 bg-pink-200/30 rounded-full blur-xl"></div>
         <div className="absolute top-1/4 right-16 w-24 h-24 bg-amber-200/40 rounded-full blur-lg"></div>
