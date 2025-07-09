@@ -2,7 +2,7 @@ import "./App.css";
 import LandingCover from "./components/landingComponents/LandingCover.jsx";
 import AudioController from "./components/landingComponents/AudioController.jsx";
 import Cover from "./components/coverComponents/Cover.jsx";
-import Verse from "./components/verseComponents/verse.jsx";
+import Verse from "./components/verseComponents/Verse.jsx";
 import GroomBrideIntro from "./components/GroomBrideIntroComponents/GroomBrideIntro.jsx";
 import Events from "./components/eventsComponents/Events.jsx";
 import Gallery from "./components/galleryComponents/Gallery.jsx";
