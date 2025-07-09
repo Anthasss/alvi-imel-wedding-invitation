@@ -51,7 +51,7 @@ export default function Events() {
           date="24"
           month="Juli"
           year="2025"
-          time="19.00 WITA"
+          time="18.00 WITA"
           locationName="Phoenix Restaurant"
           locationAddress="Jl. Terusan Timor Raya, Kelapa Lima, Kupang"
           delay={0.4}
