@@ -19,11 +19,7 @@ export default function Footer() {
         </svg>
       </div>
       
-      <motion.div 
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ once: true }}
+      <div 
         className="py-16 bg-[#d6ada4]"
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -47,7 +43,7 @@ export default function Footer() {
             Alfi & Imel
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 }
