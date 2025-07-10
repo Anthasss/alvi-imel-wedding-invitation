@@ -70,7 +70,7 @@ export default function LandingCover() {
         >
           <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl shadow-2xl overflow-hidden border-4 border-white/50">
             <img
-              src="/gallery/g14.jpeg"
+              src="/landingCover.jpg"
               alt="Wedding couple"
               className="w-full h-full object-cover"
             />
