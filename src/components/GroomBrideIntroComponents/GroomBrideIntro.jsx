@@ -30,7 +30,7 @@ export default function GroomBrideIntro() {
           viewport={{ once: true }}
         >
           <PersonIntro
-            imagePath="/groomBrideIntro/groom.jpeg"
+            imagePath="/groomBrideIntro/groom.jpg"
             name="Alfi Anderson Padja"
             desc="Anak keempat Putra tunggal dari empat bersaudara"
             parents="pasangan Bapak Johanis Padja dan Ibu Marleni Padja-Gow."

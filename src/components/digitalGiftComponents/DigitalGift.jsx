@@ -23,7 +23,7 @@ export default function DigitalGift() {
       >
         <h1 className="text-4xl font-bold text-gray-800 mb-4">Hadiah Digital</h1>
         <p className="text-2xl font-semibold text-gray-600 max-w-2xl">
-          Kehadiran Anda di pernikahan kami adalah hadiah terbesar dari semuanya. Namun, jika Anda ingin memberikan hadiah, kami akan sangat berterima kasih atas kontribusi Anda.
+          Kehadiran Anda di pernikahan kami adalah hadiah terbesar dari semuanya. Namun, jika memberi adalah tanda ungkapan kasih anda, anda dapat memberi hadiah secara cashless.
         </p>
       </motion.div>
 

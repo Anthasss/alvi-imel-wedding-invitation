@@ -28,7 +28,7 @@ export default function Events() {
           viewport={{ once: true }}
           className="text-center mb-12 px-12"
         >
-          <h2 className="text-4xl font-semibold text-amber-800 mb-2">Kami mengundang Anda untuk hadir dalam acara kami</h2>
+          <h2 className="text-4xl font-semibold text-amber-800 mb-2">Save the Date!</h2>
         </motion.div>
 
         {/* Pemberkatan */}
